@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa Cultural ACABA</title>
+
+  <!-- Fuentes más atractivas -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Trebuchet MS', sans-serif; /* solo cambié la fuente */
+      background: linear-gradient(135deg, #000 40%, #fff 100%);
+      color: #222;
+    }
+    header {
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      border-radius: 0 0 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      margin: 0;
+      color: darkred;
+      font-family: 'Playfair Display', serif; /* fuente más vistosa para el título */
+    }
+    header h2 {
+      font-size: 1.1em;
+      margin: 0;
+      color: goldenrod;
+      font-family: 'Poppins', sans-serif; /* coherencia tipográfica */
+    }
+    nav {
+      background: #333;
+      border-radius: 0 0 15px 15px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+    nav a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+    .contenedor {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      display: none; /* Ocultamos todas las secciones por defecto */
+    }
+    .contenedor.activo {
+      display: block; /* Mostramos solo la activa */
+    }
+    .taller {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-left: 6px solid darkred;
+      background: #fafafa;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .taller h3 {
+      margin: 0;
+      color: darkred;
+      text-shadow: 1px 1px 2px #aaa;
+      transition: color 0.3s;
+      font-family: 'Playfair Display', serif; /* títulos de talleres más elegantes */
+    }
+    .taller h3:hover {
+      color: red;
+      cursor: pointer;
+    }
+    .taller img {
+      max-width: 220px;
+      border-radius: 10px;
+    }
+    .taller p {
+      margin: 5px 0;
+    }
+    .mapa {
+      width: 100%;
+      height: 400px;
+      border: 50%;
+    }
+    .mapa img {
+      max-width: 100%;
+      border-radius: 15px;
+    }
+    .servicios a {
+      display: block;
+      margin: 8px 0;
+      color: darkblue;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+    .servicios a:hover {
+      color: crimson;
+      font-weight: bold;
+    }
+    .diplo p {
+      margin: 5px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .redes a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    .redes img {
+      height: 40px;
+      width: 40px;
+    }
+    .conte {
+      width: 300px; /* Ancho del contenedor */
+      height: 200px; /* Alto del contenedor */
+      background-color: rgb(255, 255, 255); /* Color de fondo */
+      margin: 20px 0; /* Centrar el contenedor */
+      padding: 10px; /* Espaciado interno */
+      border: 2px solid rgb(44, 44, 48); /* Borde */
+    }
+    #videob
+    {
+      padding-left: 800px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    </div>
+      <a target="_blank">
+      <img src="img/LOGOTIPO BELLAS ARTES MÉXICO NEGRO.png" alt="10" width="50">
+    </a>
+    </div>
+    <div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <a target="_blank">
+      <h1>Empresa Cultural ACABA</h1>
+      <h2>Bellas Artes México</h2>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+      <li><a onclick="mostrarSeccion('esba')">ESBA</a></li>
+      <li><a onclick="mostrarSeccion('ubicacion')">Ubicación</a></li>
+      <li><a onclick="mostrarSeccion('servicios')">Servicios</a></li>
+      <li><a onclick="mostrarSeccion('conocemas')">Conoce más</a></li>
+      <li><a onclick="mostrarSeccion('contacto')">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="inicio" class="contenedor activo">
+    <h2 style="text-align: center;">Escuela Superior de las Bellas Artes</h2>
+    <div style="text-align: center;">
+  <img src="img/imagen_inicio.jpg.jpg" alt="Descripción de la imagen" style="width: 800px;">
+</div>
+  </section>
+
+  <!-- ESBA -->
+  <section id="esba" class="contenedor">
+    <h2>Somos</h2>
+    <p>Somos una escuela enfocada en la formación y difusión cultural, cuyo objetivo es brindar espacios de aprendizaje y desarrollo para artistas, estudiantes y público interesado en las artes escénicas. Realizando eventos artísticos como montajes teatrales y conciertos.</p>
+
+    <div class="taller">
+      <div>
+        <h3>🩰 Diplomado en Danza</h3>
+        <p>Enfocado en técnicas de danza clásica, contemporánea y folklórica, Incluye expresión corporal, coordinación rítmica y puestas en escena, Ideal para quienes buscan formarse como bailarines o maestros de danza.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgdanza1.jpeg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎨 Diplomado en Pintura</h3>
+        <p>Enseña fundamentos del dibujo artístico, teoría del color y técnicas de pintura (óleo, acrílico, acuarela), Desarrollo de la creatividad plástica y composición visual, Orientado tanto a principiantes como a quienes desean profesionalizarse en artes visuales.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgdinujo.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎶 Diplomado en Música (Guitarra y Piano)</h3>
+        <p>Formación musical con práctica instrumental en guitarra y piano, incluye teoría musical, lectura de partituras, armonía y acompañamiento. Dirigido a quienes buscan iniciarse o mejorar en ejecución musical.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgpiano.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>📚 Diplomado en Metodologías en la Enseñanza de las Artes</h3>
+        <p>Preparación pedagógica para enseñar artes (música, teatro, danza, pintura). Estrategias didácticas, planificación de clases y evaluación artística, ideal para docentes o artistas que quieran dedicarse a la enseñanza.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgmeto.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+     <div class="taller">
+      <div>
+        <h3>🎤 Diplomado en Actuación y Canto</h3>
+        <p>Formación integral en artes escénicas y técnicas vocales. Incluye actuación teatral, expresión corporal, proyección de voz y canto. Orientado a quienes buscan desarrollarse en teatro musical o actuación profesional.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgcanto.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎬 Diplomado en Cine, Teatro y Televisión</h3>
+        <p>El teatro es el arte más antiguo de la humanidad: existe desde hace más de 2,500 años. México es uno de los países con mayor producción de telenovelas en el mundo. En cine, una escena de 30 segundos puede tardar ¡hasta un día completo en grabarse!</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgactu.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+   <section id="ubicacion" class="contenedor mapa" style="width: 50%; margin: 0 auto;">
+    <iframe width="100%" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-99.3165135383606%2C19.6211544549279%2C-99.3105697631836%2C19.62412049467141&amp;layer=mapnik&amp;marker=19.622637481642496%2C-99.3135416507721"
+    style="border: 1px solid black"></iframe>
+    <br/>
+    <big>
+    <a href="https://www.openstreetmap.org/?mlat=19.622637&amp;mlon=-99.313542#map=18/19.622637/-99.313542">
+    Haz click para ver la Ubicación exacta.</a>
+    </big>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="contenedor servicios">
+  <h2 style="text-align: center;">Infórmate sobre nuestros talleres</h2>
+
+  <div class="taller">
+    <a href="doc/diplomado_actuacion_canto.pdf.pdf" download target="_blank">
+      <img src="img/canto3.jpg" alt="Diplomado actuación canto">
+      <div class="texto-taller">
+        <p>Diplomado actuación canto: Artes escénicas y técnicas vocales.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="taller">
+    <a href="doc/diplomado_cine_teatro.pdf.pdf" download target="_blank">
+      <img src="img/actuacion3.jpg" alt="Diplomado cine teatro">
+      <div class="texto-taller">
+        <p>Diplomado cine teatro</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="taller">
+    <a href="doc/diplomado_danza.pdf (1).pdf" download target="_blank">
+      <img src="img/danza3.jpg" alt="Diplomado danza">
+      <div class="texto-taller">
+        <p>Diplomado danza: Técnicas de danza clásica, contemporánea y folklórica</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="taller">
+    <a href="doc/diplomado_metodologias.pdf.pdf" download target="_blank">
+      <img src="img/metdodo3.jpg" alt="Diplomado metodologías">
+      <div class="texto-taller">
+        <p>Diplomado metodologías: Preparación pedagógica para enseñar artes</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="taller">
+    <a href="doc/diplomado_dibujo_pintura.pdf.pdf" download target="_blank">
+      <img src="img/dibujo3.jpg" alt="Diplomado dibujo pintura">
+      <div class="texto-taller">
+        <p>Diplomado dibujo pintura: Fundamentos del dibujo artístico</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="taller">
+    <a href="doc/diplomado_musica.pdf.pdf" download target="_blank">
+      <img src="img/musica3.jpg" alt="Diplomado música">
+      <div class="texto-taller">
+        <p>Diplomado música: Formación musical con práctica instrumental.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+  <!-- CONOCE MÁS -->
+  <section id="conocemas" class="contenedor">
+    <h2>🌟 Conoce más sobre nuestros Talleres y Diplomados</h2>
+
+    <div class="taller">
+      <div>
+        <h3>🩰 Diplomado en Danza</h3>
+        <p>Bailar mejora la memoria y retrasa el envejecimiento cerebral, según estudios neurológicos.</p>
+        <p>La danza combina arte y ejercicio: una hora de baile quema casi las mismas calorías que correr.</p>
+        <p>Los grandes bailarines del mundo entrenan más de 6 horas diarias, pero cualquiera puede iniciar sin experiencia.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgd2.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎨 Diplomado en Dibujo y Pintura</h3>
+        <p>El dibujo activa áreas del cerebro relacionadas con la creatividad y la resolución de problemas.</p>
+        <p>Pintar ayuda a reducir el estrés y se usa como terapia en hospitales.</p>
+        <p>Grandes pintores como Van Gogh o Monet comenzaron a experimentar con técnicas nuevas sin formación académica tradicional.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgp2.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎶 Diplomado en Música (Guitarra y Piano)</h3>
+        <p>Tocar un instrumento desarrolla la coordinación motriz y fortalece la memoria.</p>
+        <p>El piano es considerado “el instrumento madre”, ya que enseña principios que se aplican a casi todos los demás instrumentos.</p>
+        <p>La guitarra es el instrumento más popular del mundo, con más de 50 millones de practicantes.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imggui.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>📚 Diplomado en Metodologías en la Enseñanza de las Artes</h3>
+        <p>Los niños que practican arte tienen hasta un 20% mejor rendimiento escolar en matemáticas y lectura.</p>
+        <p>Existen métodos didácticos reconocidos internacionalmente como Orff, Kodály o Suzuki, que combinan música y juego.</p>
+        <p>Enseñar arte no solo forma artistas, también ayuda a desarrollar disciplina, empatía y creatividad en cualquier área.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/metdo.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎤 Diplomado en Actuación y Canto</h3>
+        <p>Actuar ayuda a vencer el miedo escénico y mejora la comunicación en la vida diaria.</p>
+        <p>Cantar libera endorfinas y serotonina, lo que genera sensación de felicidad.</p>
+        <p>Muchos cantantes famosos iniciaron en coros comunitarios o estudiantiles antes de llegar a escenarios internacionales.</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgcanto2.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+
+    <div class="taller">
+      <div>
+        <h3>🎬 Diplomado en Cine, Teatro y Televisión</h3>
+        <p>El teatro es el arte más antiguo de la humanidad: existe desde hace más de 2,500 años.</p>
+        <p>México es uno de los países con mayor producción de telenovelas en el mundo.</p>
+        <p>En cine, una escena de 30 segundos puede tardar ¡hasta un día completo en grabarse!</p>
+      </div>
+      </div>
+      <a target="_blank">
+      <img src="img/imgac2.jpg" alt="Imagen 1" width="220">
+    </a>
+    </div>
+    </div>
+<div style="text-align: center;">
+  <a href="#">
+    <video height="400px" width="400px" src="img/videob.mp4" controls autoplay muted></video>
+  </a>
+</div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contenedor">
+    <h2>Contacto</h2>
+    <p><b>Director General:</b> Ernesto Avalos Fuentes</p>
+    <p><b>Teléfono:</b> 5528518760</p>
+    <p><b>Email:</b> maestroernestofuertes@gmail.com</p>
+
+    <div class="redes">
+      <a href="https://www.facebook.com/share/171w1oTxAj/" target="_blank">
+      <img src="img/fb.jpg" alt="Imagen 1" width="100">
+    </a>
+      <a href="https://www.instagram.com/esbateatro?igsh=MXRrdjI2ZnF1ZGg5dQ==" target="_blank">
+      <img src="img/ig.jpg" alt="Imagen 1" width="70">
+    </a>
+      <a href="https://www.tiktok.com/@esba289?_t=ZS-8zCznC1orcv&_r=1" target="_blank">
+      <img src="img/tt.jpg" alt="Imagen 1" width="70">
+    </a>
+      <a href="https://m.youtube.com/@toltecallicentrosuperiorde8020" target="_blank">
+      <img src="img/yt.jpg" alt="Imagen 1" width="70">
+    </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Empresa Cultural ACABA - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.contenedor').forEach(sec => {
+        sec.classList.remove('activo');
+      });
+      document.getElementById(id).classList.add('activo');
+    }
+  </script>
+
+</body>
+</html>
